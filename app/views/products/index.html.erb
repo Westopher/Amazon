@@ -12,20 +12,46 @@
     </tr>
   </thead>
 
+  <div class="row">
+
+        <div class="col-md-5">
   <tbody>
+
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.formatted_price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <!-- <div class="col-md-7">
+          <a href="#">
+              <img class="img-responsive" src="#" alt="">
+          </a> HERE WE HAVE CODE THAT PUTS IN A PHOTO-->
+        </div> </td>
+        <td><h3><%= product.name %></h3></td>
+        <td><p><%= product.description %></p></td>
+        <td><h4><%= product.formatted_price %>/hour</h4></td>
+        <td><a class="btn btn-primary" <%= link_to 'Show', product %> </td>
+        <td><a class="btn btn-primary" <%= link_to 'Edit', edit_product_path(product) %> </td>
+        <td><a class="btn btn-primary" <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
       </tr>
     <% end %>
   </tbody>
+</div>
+</div>
+
 </table>
 
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<!-- <div class="row">
+    <div class="col-md-7"> -->
+        <!-- <a href="#">
+            <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+        </a>
+    </div> -->
+    <!-- <div class="col-md-5">
+        <h3>Hello</h3> -->
+        <!-- <h4>Subheading</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</div> -->
